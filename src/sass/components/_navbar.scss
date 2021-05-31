@@ -1,0 +1,37 @@
+@use "../abstracts" as a;
+
+.desktop-nav {
+  background-color: a.$dark-green;
+  margin: 0;
+  position: sticky;
+  align-items: center;
+  .logo-img {
+    margin-left: 2rem;
+  }
+  .nav-title {
+    color: a.$white;
+    font-family: a.$montserrat-family;
+    font-weight: a.$font-weight-regular;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    .nav-link {
+      font-family: a.$montserrat-family;
+      font-weight: a.$font-weight-regular;
+      margin: 0 1rem;
+      color: a.$white;
+      text-decoration: none;
+    }
+
+    li {
+      display: inline-block;
+    }
+
+    .nav-link:hover {
+      color: a.$morning-blue;
+    }
+  }
+}
