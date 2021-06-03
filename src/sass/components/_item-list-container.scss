@@ -1,0 +1,7 @@
+@use "../abstracts/" as a;
+
+.container-title {
+    font-family: a.$montserrat-family;
+	font-weight: a.$font-weight-bold;
+	font-size: 4rem;
+}

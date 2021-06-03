@@ -9,6 +9,7 @@
   align-items: center;
   background-color: a.$dark-green;
   margin: 0;
+  padding-right: 1rem;
   position: sticky;
   .logo-title {
     display: flex;
@@ -16,7 +17,7 @@
     align-items: center;
     .logo-img {
         margin-left: 2rem;
-      }
+	}
     .nav-title {
       color: a.$white;
       font-family: a.$montserrat-family;
@@ -32,6 +33,7 @@
       display: inline-block;
       font-family: a.$montserrat-family;
       font-weight: a.$font-weight-regular;
+	  font-size: 1.3rem;
       margin: 0 1rem;
       color: a.$white;
       text-decoration: none;

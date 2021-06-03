@@ -1,0 +1,9 @@
+@use "../abstracts/" as a;
+
+.cart-widget-icon {
+	color: a.$white;
+}
+
+.cart-widget-icon:hover {
+	color: a.$morning-blue;
+}
