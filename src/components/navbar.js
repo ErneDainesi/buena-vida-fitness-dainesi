@@ -18,6 +18,11 @@ export const DesktopNavbar = () => {
 	</>;
 }
 
+// WIP
+// Esta era mi idea al principio para manejar el navbar
+// con responsive, creo que lo mejor seria dejar todo en un mismo componente
+// y hacer un display:none; en pantallas mas chicas y ocultar los links
+// y lograr que se muestren una vez se haga click en el menu (ver carpeta utils)
 export const MobileNavbar = () => {
 	return <>
 		<nav className="mobile-nav">

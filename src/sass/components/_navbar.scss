@@ -1,5 +1,7 @@
 @use "../abstracts" as a;
 
+// Estilos generales para el navbar, en los breakpoints manejo la vista
+// para celulares
 .desktop-nav, .mobile-nav {
   display: flex;
   flex-direction: row;
@@ -27,15 +29,12 @@
     flex-direction: row;
     justify-content: flex-end;
     .nav-link {
+      display: inline-block;
       font-family: a.$montserrat-family;
       font-weight: a.$font-weight-regular;
       margin: 0 1rem;
       color: a.$white;
       text-decoration: none;
-    }
-
-    li {
-      display: inline-block;
     }
 
     .nav-link:hover {
@@ -47,6 +46,8 @@
 .mobile-nav {
   display: none;
 }
+
+/* BREAKPOINTS */
 
 @media screen and (max-width: 1024px){
   .desktop-nav {
@@ -73,14 +74,17 @@
     }
 
     .nav-links {
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      transform: translateY(0);
-      transition: transform 0.2s;
-      .nav-link {
-        color: black;
-      }
+      // Dejo comentado esto porque todavia no lo logro hacer funcionar
+      // igualmente, queria que veas como quedaría el menu con responsive
+      display: none;
+      //display: flex;
+      //flex-direction: column;
+      //align-content: center;
+      //transform: translateY(0);
+      //transition: transform 0.2s;
+      //.nav-link {
+      //  color: black;
+      //}
     }
     .logo-title {
       .nav-title {
@@ -94,10 +98,7 @@
   }
 }
 
-.showMenu {
-  transform: translateY(200%);
-}
-
+// Breakpoint para quitar nombre de la marca del navbar de telefonos
 @media screen and (max-width: 767px) {
   .mobile-nav {
     .logo-title {
