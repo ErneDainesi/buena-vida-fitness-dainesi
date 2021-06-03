@@ -2,7 +2,7 @@
 
 // Estilos generales para el navbar, en los breakpoints manejo la vista
 // para celulares
-.desktop-nav, .mobile-nav {
+.desktop-nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -47,64 +47,3 @@
   display: none;
 }
 
-/* BREAKPOINTS */
-
-@media screen and (max-width: 1024px){
-  .desktop-nav {
-    display: none;
-  }
-
-  .mobile-nav {
-    display: flex;
-    &-menu {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      position: fixed;
-      z-index: 100;
-      top: 2rem;
-      right: 1rem;
-      &-icon {
-        margin: 0.3rem 1rem;
-        background-color: a.$white;
-        width: 3rem;
-        height: 0.3rem;
-        border-radius: 2rem;
-      }
-    }
-
-    .nav-links {
-      // Dejo comentado esto porque todavia no lo logro hacer funcionar
-      // igualmente, queria que veas como quedaría el menu con responsive
-      display: none;
-      //display: flex;
-      //flex-direction: column;
-      //align-content: center;
-      //transform: translateY(0);
-      //transition: transform 0.2s;
-      //.nav-link {
-      //  color: black;
-      //}
-    }
-    .logo-title {
-      .nav-title {
-        font-size: 1.5rem;
-      }
-      .logo-img {
-        margin-left: 0.1rem;
-      }
-    } 
-    
-  }
-}
-
-// Breakpoint para quitar nombre de la marca del navbar de telefonos
-@media screen and (max-width: 767px) {
-  .mobile-nav {
-    .logo-title {
-      .nav-title {
-        display: none;
-      }
-    }
-  }
-}
