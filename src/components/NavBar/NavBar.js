@@ -1,8 +1,8 @@
 import React from 'react';
 import Logo from '../../images/logo-buena-vida-circle.png'
-import {CartWidget} from './CartWidget';
+import {CartWidget} from '../CartWidget/CartWidget';
 
-export const DesktopNavbar = () => {
+export const NavBar = () => {
 	return <>
 		<nav className="desktop-nav">
 			<div className="logo-title">

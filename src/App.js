@@ -1,12 +1,12 @@
 import './sass/main.scss';
-import {DesktopNavbar} from './components/navbar/navbar';
-import {ItemListContainer} from './components/container/ItemListContainer';
+import {NavBar} from './components/NavBar/NavBar';
+import {ItemListContainer} from './components/ItemListContainer/ItemListContainer';
 
 function App() {
 	return (
 		<div className="App">
 			<header className="App-header">
-				<DesktopNavbar />
+				<NavBar />
 				<ItemListContainer />
 			</header>
 		</div>
