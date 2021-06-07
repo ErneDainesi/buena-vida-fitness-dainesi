@@ -1,0 +1,28 @@
+@use "../abstracts/" as a;
+
+.item-count-container {
+    display: flex;
+    flex-direction: column;
+	align-content: center;
+	text-align: center;
+
+	.amount-toggler {
+        display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 13%;
+		margin: 1rem auto;
+		padding: 0 0.7rem;
+		border: 0.1rem solid a.$dark-green;
+		background-color: a.$white;
+
+		.product-amount {
+		    color: a.$dark-green;
+			font-weight: a.$font-weight-bold;
+		}
+    }
+	.add-to-cart-btn {
+		align-self: center;
+    }
+}

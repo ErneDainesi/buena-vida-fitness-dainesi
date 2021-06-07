@@ -1,0 +1,41 @@
+@use "../abstracts" as *;
+
+.btn {
+	cursor: pointer;
+	color: $white;
+	border-radius: 0.4rem;
+	padding: 0.3rem;
+	border: 50% solid $dark-green;
+	transition: 220ms all ease-in-out;
+	box-shadow: 0rem 0rem 0.5rem $black;
+}
+
+.amount-toggler-btn {
+	color: $dark-green;
+	border: none;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.amount-toggler-btn:disabled {
+    cursor: default;
+	color: $white;
+}
+
+.btn-dark-green {
+	background-color: $dark-green;
+}
+
+.btn-light-green {
+	background-color: $light-green;
+}
+
+.btn-light-green:hover, .btn-light-green:focus {
+	background-color: $dark-green;
+	box-shadow: none;
+}
+
+.btn-dark-green:hover, .btn-dark-green:focus {
+	background-color: $light-green;
+}
+

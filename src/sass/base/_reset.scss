@@ -1,3 +1,4 @@
+@use "../abstracts/" as *;
 /* Box sizing rules */
 *,
 *::before,
@@ -36,11 +37,24 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: $montserrat-family;
+  font-weight: $font-weight-regular;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	font-family: inherit;
+	padding: 0;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* Make images easier to work with */
