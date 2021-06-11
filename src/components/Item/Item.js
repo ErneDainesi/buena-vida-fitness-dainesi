@@ -1,16 +1,17 @@
 import React from 'react';
+import Card from '../Card/Card';
 
 const Item = props => {
-	const {id, price, title, description, imgUrl} = props.itemData;
-	return <div className="item-card">
-		<h3 className="item-card-title">{title}</h3>
-		<img src={imgUrl} alt={`img-${id}`} className="item-card-img" />
-		<div className="item-card-body">
-			<p className="item-card-description">{description}</p>
-			<p className="item-card-price">{`$${price}`}</p>
-		</div>
-		<button className="btn btn-dark-green">Ver Detalle</button>
-	</div>
+	const {title, imgUrl, id, description, price} = props.itemData;
+	return <Card title={title} imgUrl={imgUrl} id={id} btnText="Ver Detalle"
+		cardBody={() => {
+			return <>
+				<p className="item-description">{description}</p>
+				<p className="item-price">{`$${price}`}</p>
+			</>
+		}}>
+	</Card>
 }
 
 export default Item;
+

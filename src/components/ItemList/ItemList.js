@@ -3,6 +3,7 @@ import Item from '../Item/Item';
 import img1 from '../../images/portada-almendras.jpg';
 import img2 from '../../images/mix-frutos-secos.jpg';
 import img3 from '../../images/cereales-cuadrados.jpg';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 const data = [
 	{
@@ -36,14 +37,14 @@ const ItemList = () => {
 			setTimeout(() => resolve(data), 2000);
 		})
 	};
-	const fetchData = () => {
+	useEffect(() => {
 		myPromise()
 			.then(data => setItems(data))
 			.catch(err => console.error(err));
-	};
-	useEffect(() => {
-		fetchData();
 	}, []);
+	if (items.length < 1) {
+		return <LoadingSpinner />
+	}
 	return <div className="item-list-container">
 		{items.map(item => <Item key={item.id} itemData={item} />)}
 	</div>

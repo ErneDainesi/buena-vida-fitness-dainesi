@@ -1,0 +1,9 @@
+@use "../abstracts/" as *;
+
+.loading-data {
+	display: grid;
+	place-items: center;
+	&-title {
+		color: $dark-green;
+	}
+}
