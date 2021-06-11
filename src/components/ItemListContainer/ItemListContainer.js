@@ -1,8 +1,8 @@
 import React from 'react';
-import ItemCount from '../ItemCount/ItemCount';
+import ItemList from '../ItemList/ItemList'
 
 export const ItemListContainer = () => {
 	return <div>
-		<ItemCount productName="Almendras" stock={5} initial={1} />
+		<ItemList />
 	</div>
 }
