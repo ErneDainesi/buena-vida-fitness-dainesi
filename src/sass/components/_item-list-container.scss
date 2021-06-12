@@ -1,7 +1,12 @@
 @use "../abstracts/" as a;
 
-.container-title {
-    font-family: a.$montserrat-family;
-	font-weight: a.$font-weight-bold;
-	font-size: 4rem;
+.item-list-container {
+	margin-top: 1.5rem;
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 0.2fr));
+	place-items: center;
+	column-gap: 7%;
+	row-gap: 3%;
+	justify-content: center;
 }
