@@ -6,7 +6,7 @@ const Card = props => {
 		<img src={imgUrl} alt={`img-${id}`} className="card-img" />
 		<h3 className="card-title">{title}</h3>
 		<div className="card-body">
-			{cardBody()}
+			{cardBody}
 		</div>
 		<button className="btn btn-dark-green">{btnText}</button>
 	</div>
