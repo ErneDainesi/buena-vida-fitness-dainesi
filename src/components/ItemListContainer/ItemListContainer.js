@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import ItemList from '../ItemList/ItemList'
+import ItemList from './components/ItemList/ItemList'
 import img1 from '../../images/portada-almendras.jpg';
 import img2 from '../../images/mix-frutos-secos.jpg';
 import img3 from '../../images/cereales-cuadrados.jpg';

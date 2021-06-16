@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../../images/logo-buena-vida-circle.png'
-import {CartWidget} from '../CartWidget/CartWidget';
+import {CartWidget} from './components/CartWidget/CartWidget';
 
 export const NavBar = () => {
 	return <>

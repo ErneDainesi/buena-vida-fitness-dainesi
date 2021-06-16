@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 
-const ItemCount = ({productName, stock, initial}) => {
+const ItemCount = ({stock, initial}) => {
 	const [count, setCount] = useState(initial);
 	const increaseAmount = () => {
 		setCount(count + 1);
@@ -11,7 +11,6 @@ const ItemCount = ({productName, stock, initial}) => {
 	}
 
 	return <div className="item-count-container">
-		<h3 className="product-title">{productName}</h3>
 		<div className="amount-toggler">
 			<button className="amount-toggler-btn" disabled={count === initial} onClick={() => decreaseAmount()}>-</button>
 			<p className="product-amount">{count}</p>
