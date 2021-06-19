@@ -4,7 +4,7 @@ import img1 from '../../images/portada-almendras.jpg';
 import img2 from '../../images/mix-frutos-secos.jpg';
 import img3 from '../../images/cereales-cuadrados.jpg';
 import img4 from '../../images/mix-semillas.jpg';
-import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
+import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
 
 const data = [
 	{
@@ -38,7 +38,7 @@ const data = [
 ];
 
 
-export const ItemListContainer = () => {
+const ItemListContainer = () => {
 	const [items, setItems] = useState([]);
 	const myPromise = () => {
 		return new Promise((resolve) => {
@@ -52,3 +52,5 @@ export const ItemListContainer = () => {
 	}, []);
 	return items.length < 1 ? <LoadingSpinner /> : <ItemList items={items} />;
 }
+
+export default ItemListContainer;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../Card/Card';
+import Card from '../../../../components/Card/Card';
 
 const Item = props => {
 	const {title, imgUrl, id, description, price} = props.itemData;
