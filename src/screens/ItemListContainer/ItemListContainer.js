@@ -24,7 +24,7 @@ const data = [
 	{
 		id: '3',
 		price: 100,
-		title: 'Cereales Cuadrados',
+		title: 'Cereales Almohaditas',
 		description: 'Rellenos de chocolate blanco',
 		imgUrl: img3
 	},
@@ -32,7 +32,7 @@ const data = [
 		id: '4',
 		price: 100,
 		title: 'Mix Semillas',
-		description: 'Variedad de semillas',
+		description: 'Lino, sésamo, chía y girasol',
 		imgUrl: img4
 	}
 ];

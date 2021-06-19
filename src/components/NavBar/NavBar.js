@@ -17,13 +17,13 @@ export const NavBar = () => {
 					<Link className="nav-link" to="/">Inicio</Link>
 				</li>
 				<li>
-					<Link className="nav-link" to="productos">Productos</Link>
+					<Link className="nav-link" to="/productos">Productos</Link>
 				</li>
 				<li>
-					<Link className="nav-link" to="nosotros">Nosotros</Link>
+					<Link className="nav-link" to="/nosotros">Nosotros</Link>
 				</li>
 				<li>
-					<Link className="nav-link" to="contacto">Contacto</Link>
+					<Link className="nav-link" to="/contacto">Contacto</Link>
 				</li>
 				<li>
 					<CartWidget />
