@@ -1,11 +1,14 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 import ItemListContainer from '../../screens/ItemListContainer/ItemListContainer';
+import {HomePageContainer} from '../../screens/HomePageContainer/HomePage';
 
 export const Router = () => {
 	return <>
 		<Switch>
-			<Route exact path="/"></Route>
+			<Route exact path="/">
+				<HomePageContainer />
+			</Route>
 			<Route exact path="/productos">
 				<ItemListContainer />
 			</Route>

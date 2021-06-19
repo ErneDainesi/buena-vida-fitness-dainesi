@@ -1,12 +1,26 @@
 @use "../abstracts/" as a;
 
 .item-list-container {
-	margin-top: 1.5rem;
+	margin: 1.5rem 0;
 	display: grid;
 	width: 100%;
-	grid-template-columns: repeat(auto-fit, minmax(15rem, 0.2fr));
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 0.2fr));
 	place-items: center;
 	column-gap: 7%;
 	row-gap: 3%;
 	justify-content: center;
+	position: relative;
+}
+
+@media screen and (max-width: 768px){
+	.item-list-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		.card {
+			margin: 2rem;
+		}
+	}
 }

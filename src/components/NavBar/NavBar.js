@@ -7,14 +7,14 @@ export const NavBar = () => {
 	return <>
 		<nav className="desktop-nav">
 			<div className="logo-title">
-				<Link to="\">
+				<Link to="/">
 					<img src={Logo} alt="logo" className="logo-img" />
 				</Link>
 				<h1 className="nav-title">Buena Vida Fitness</h1>
 			</div>
 			<ul className="nav-links">
 				<li>
-					<Link className="nav-link" to="\">Inicio</Link>
+					<Link className="nav-link" to="/">Inicio</Link>
 				</li>
 				<li>
 					<Link className="nav-link" to="productos">Productos</Link>
