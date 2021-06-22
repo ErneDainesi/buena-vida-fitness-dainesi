@@ -1,7 +1,5 @@
 @use "../abstracts" as a;
 
-// Estilos generales para el navbar, en los breakpoints manejo la vista
-// para celulares
 .desktop-nav {
   display: flex;
   flex-direction: row;
@@ -45,7 +43,38 @@
   }
 }
 
-.mobile-nav {
-  display: none;
+.dropdown {
+	position: relative;
 }
 
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: a.$light-green;
+}
+
+.dropdown-content .dropdown-link {
+	text-decoration: none;
+	text-align: left;
+	color: a.$white;
+	font-size: 1.2rem;
+	padding: 1rem 0.5rem;
+}
+
+
+.dropdown-content .dropdown-link:hover {
+	color: a.$dark-green;
+}
+
+.dropdown:hover .dropdown-content {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	justify-self: center;
+	left: 50%;
+	margin-left: -40%;
+}
+
+.dropdown-icon {
+	margin-left: 1rem;
+}

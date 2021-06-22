@@ -10,7 +10,7 @@ export const Router = () => {
 			<Route exact path="/">
 				<HomePageContainer />
 			</Route>
-			<Route exact path="/productos">
+			<Route exact path="/productos/:category">
 				<ItemListContainer />
 			</Route>
 			<Route exact path="/nosotros"></Route>
