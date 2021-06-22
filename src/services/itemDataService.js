@@ -47,8 +47,8 @@ const itemData = [
 	}
 ];
 
-export const ItemDataService = () => {
+export const itemDataService = () => {
 	return new Promise(resolve => {
-		setTimeout(resolve(itemData), 2000);
+		setTimeout(() => resolve(itemData), 2000);
 	});
 }
