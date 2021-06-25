@@ -11,6 +11,7 @@ const itemData = [
 		title: 'Almendras',
 		description: 'Pack de almendras frescas',
 		category: 'frutos-secos',
+		stock: 5,
 		imgUrl: img1
 	},
 	{
@@ -19,6 +20,7 @@ const itemData = [
 		title: 'Mix Frutos Secos',
 		description: 'Bolsa de mix de frutos secos',
 		category: 'frutos-secos',
+		stock: 5,
 		imgUrl: img2
 	},
 	{
@@ -27,6 +29,7 @@ const itemData = [
 		title: 'Cereales Almohaditas',
 		description: 'Rellenos de chocolate blanco',
 		category: 'cereales',
+		stock: 5,
 		imgUrl: img3
 	},
 	{
@@ -35,6 +38,7 @@ const itemData = [
 		title: 'Mix Semillas',
 		description: 'Lino, sésamo, chía y girasol',
 		category: 'semillas',
+		stock: 5,
 		imgUrl: img4
 	},
 	{
@@ -43,6 +47,7 @@ const itemData = [
 		title: 'Mix Frutos Rojos',
 		description: 'Frambuesas y arandanos',
 		category: 'frutos-rojos',
+		stock: 5,
 		imgUrl: img5
 	}
 ];

@@ -9,6 +9,17 @@
 	transition: 220ms all ease-in-out;
 }
 
+.add-to-cart-btn:disabled {
+	color: $black;
+	background-color: $light-gray;
+}
+
+.add-to-cart-btn:disabled:hover {
+	color: $black;
+	background-color: $light-gray;
+	cursor: default;
+}
+
 .btn-shadow {
 	box-shadow: 0rem 0rem 0.5rem $black;
 }

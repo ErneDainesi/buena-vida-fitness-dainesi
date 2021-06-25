@@ -1,0 +1,12 @@
+@use '../abstracts/' as *;
+
+.end-purchase {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	.end-purchase-btn {
+		margin: 1rem 0;
+		font-size: 1.5rem;
+	}
+}
