@@ -15,8 +15,8 @@ const ItemDetail = item => {
 			<p className="item-detail-description">{description}</p>
 			<p className="item-detail-price">{`$${price}`}</p>
 			{endPurchase ?
-				<EndPurchase {...item} handlePurchaseStatus={purchaseSatus} changeStock={handleAmount} /> :
-				<ItemCount {...item} handlePurchaseStatus={purchaseSatus} initialAmount={amount} changeStock={handleAmount} />
+				<EndPurchase {...item} amount={amount} handlePurchaseStatus={purchaseSatus} changeStock={handleAmount} /> :
+				<ItemCount stock={stock} handlePurchaseStatus={purchaseSatus} initialAmount={amount} changeStock={handleAmount} />
 			}
 		</div>
 	</div>
