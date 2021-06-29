@@ -6,7 +6,9 @@ export const CartProvider = props => {
 	const [cart, setCart] = useState([]);
 	const addToCart = (item, quantity) => {
 		if (!isInCart(item.id)) {
+			console.log("debug cart", [...cart, {item, quantity}]);
 			setCart([...cart, {item, quantity}]);
+			console.log("debug cart", cart);
 		} else {
 			console.error("Item is already in cart");
 		}
