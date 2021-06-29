@@ -4,6 +4,7 @@ import ItemListContainer from '../../screens/ItemListContainer/ItemListContainer
 import {ItemDetailContainer} from '../../screens/ItemDetailContainer/ItemDetailContainer';
 import {HomePageContainer} from '../../screens/HomePageContainer/HomePage';
 import {Cart} from '../../components/Cart/Cart';
+import {CartProvider} from '../../contexts/CartContext';
 
 export const Router = () => {
 	return <>
@@ -17,7 +18,9 @@ export const Router = () => {
 			<Route exact path="/nosotros"></Route>
 			<Route exact path="/contacto"></Route>
 			<Route exact path="/itemDetailContainer/:id">
-				<ItemDetailContainer />
+				<CartProvider>
+					<ItemDetailContainer />
+				</CartProvider>
 			</Route>
 			<Route exact path="/cart">
 				<Cart />
