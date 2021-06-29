@@ -4,7 +4,7 @@ import ItemListContainer from '../../screens/ItemListContainer/ItemListContainer
 import {ItemDetailContainer} from '../../screens/ItemDetailContainer/ItemDetailContainer';
 import {HomePageContainer} from '../../screens/HomePageContainer/HomePage';
 import {Cart} from '../../components/Cart/Cart';
-import {CartProvider} from '../../contexts/CartContext';
+import {CartProvider} from '../../contexts/CartContext/CartContext';
 
 export const Router = () => {
 	return <>

@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {useHistory} from 'react-router-dom';
-import {CartContext} from '../../../../contexts/CartContext';
+import {CartContext} from '../../../../contexts/CartContext/CartContext';
 
 export const EndPurchase = ({detail, handlePurchaseStatus, changeStock}) => {
 	const history = useHistory();

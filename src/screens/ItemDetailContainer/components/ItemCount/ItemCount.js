@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react';
-import {CartContext} from '../../../../contexts/CartContext';
+import {CartContext} from '../../../../contexts/CartContext/CartContext';
 
 const ItemCount = props => {
 	const {changeStock, detail, handlePurchaseStatus, initialAmount} = props;
