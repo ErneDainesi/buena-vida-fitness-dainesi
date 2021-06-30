@@ -13,17 +13,17 @@ export const CartProvider = props => {
 		return false;
 	};
 	const updateCart = (item, quantity) => {
-		setCart(cart.filter(product => {
-			if (product.item.id === item.id) {
-				product.quantity = quantity;
-				return true;
-			}
-			return false;
-		}));
+		const selectedItem = cart.find(product => product.item.id === item.id);
+		const newQuantity = selectedItem.quantity + quantity;
+		if (newQuantity <= selectedItem.item.stock) {
+			selectedItem.quantity += quantity;
+		} else {
+			console.error("Selected amount exceeds current stock");
+		}
 	}
 	const addToCart = (item, quantity) => {
 		isInCart(item.id) ? updateCart(item, quantity) : setCart([...cart, {item, quantity}]);
-	};
+	}
 	const emptyCart = () => {
 		setCart([]);
 	};
