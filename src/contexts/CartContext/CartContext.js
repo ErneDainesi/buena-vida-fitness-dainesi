@@ -4,18 +4,6 @@ export const CartContext = createContext();
 
 export const CartProvider = props => {
 	const [cart, setCart] = useState([]);
-	const addToCart = (item, quantity) => {
-		if (!isInCart(item.id)) {
-			console.log("debug cart", [...cart, {item, quantity}]);
-			setCart([...cart, {item, quantity}]);
-			console.log("debug cart", cart);
-		} else {
-			console.error("Item is already in cart");
-		}
-	};
-	const emptyCart = () => {
-		setCart([]);
-	};
 	const isInCart = itemId => {
 		for (const product of cart) {
 			if (product.item.id === itemId) {
@@ -23,6 +11,21 @@ export const CartProvider = props => {
 			}
 		}
 		return false;
+	};
+	const updateCart = (item, quantity) => {
+		setCart(cart.filter(product => {
+			if (product.item.id === item.id) {
+				product.quantity = quantity;
+				return true;
+			}
+			return false;
+		}));
+	}
+	const addToCart = (item, quantity) => {
+		isInCart(item.id) ? updateCart(item, quantity) : setCart([...cart, {item, quantity}]);
+	};
+	const emptyCart = () => {
+		setCart([]);
 	};
 	useEffect(() => {
 		console.log("Updated Cart", cart);
