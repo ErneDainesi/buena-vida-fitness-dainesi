@@ -31,7 +31,7 @@ export const CartProvider = props => {
 	useEffect(() => {
 		console.log("Updated Cart", cart);
 	});
-	return <CartContext.Provider value={{addToCart, emptyCart, itemsInsideCart, removeFromCart}}>
+	return <CartContext.Provider value={{addToCart, emptyCart}}>
 		{props.children}
 	</CartContext.Provider>
 }
