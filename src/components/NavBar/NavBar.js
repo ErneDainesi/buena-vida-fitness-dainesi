@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Logo from '../../images/logo-buena-vida-circle.png'
 import {CartWidget} from './components/CartWidget/CartWidget';
 import {Link} from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCaretDown} from '@fortawesome/free-solid-svg-icons';
+import {CartContext} from '../../contexts/CartContext/CartContext';
 
 export const NavBar = () => {
+	const {isCartEmpty} = useContext(CartContext);
 	return <>
 		<nav className="desktop-nav">
 			<div className="logo-title">
@@ -30,7 +32,7 @@ export const NavBar = () => {
 				</div>
 				<Link className="nav-link" to="/nosotros">Nosotros</Link>
 				<Link className="nav-link" to="/contacto">Contacto</Link>
-				<CartWidget />
+				{!isCartEmpty() && <Link className="nav-link" to="/cart"><CartWidget /></Link>}
 			</div>
 		</nav>
 	</>;

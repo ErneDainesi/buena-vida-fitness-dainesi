@@ -41,10 +41,15 @@ export const CartProvider = props => {
 		}
 		return count;
 	}
+	const cartTotal = () => {
+		let total = 0;
+		cart.map(item => total += item.item.price * item.quantity);
+		return total;
+	}
 	useEffect(() => {
 		console.log("Updated Cart", cart);
 	});
-	return <CartContext.Provider value={{addToCart, emptyCart}}>
+	return <CartContext.Provider value={{addToCart, emptyCart, itemsInsideCart, removeFromCart, isCartEmpty, cartItemQuantity, cartTotal}}>
 		{props.children}
 	</CartContext.Provider>
 }

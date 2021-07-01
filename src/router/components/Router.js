@@ -3,7 +3,7 @@ import {Switch, Route} from 'react-router-dom';
 import ItemListContainer from '../../screens/ItemListContainer/ItemListContainer';
 import {ItemDetailContainer} from '../../screens/ItemDetailContainer/ItemDetailContainer';
 import {HomePageContainer} from '../../screens/HomePageContainer/HomePage';
-import {Cart} from '../../components/Cart/Cart';
+import {Cart} from '../../screens/Cart/Cart';
 
 export const Router = () => {
 	return <>
