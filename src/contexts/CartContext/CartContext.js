@@ -17,6 +17,7 @@ export const CartProvider = props => {
 		const newQuantity = selectedItem.quantity + quantity;
 		if (newQuantity <= selectedItem.item.stock) {
 			selectedItem.quantity += quantity;
+			console.log("Updated Cart", cart);
 		} else {
 			console.error("Selected amount exceeds current stock");
 		}
@@ -30,7 +31,7 @@ export const CartProvider = props => {
 	useEffect(() => {
 		console.log("Updated Cart", cart);
 	});
-	return <CartContext.Provider value={{addToCart, emptyCart}}>
+	return <CartContext.Provider value={{addToCart, emptyCart, itemsInsideCart, removeFromCart}}>
 		{props.children}
 	</CartContext.Provider>
 }
