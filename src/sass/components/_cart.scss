@@ -5,12 +5,46 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	margin: 1.5rem 0;
 	.card {
 		flex-direction: row;
+		justify-content: space-between;
+		margin: 1.5rem 0;
+		min-width: 40%;
 		&-body {
-
+			flex-direction: column;
+			padding: 0 1rem;
+		}
+		.btn {
+			margin-top: 1.5rem;
+			font-size: 1.5rem;
+		}
+		&-img {
+			border-top-right-radius: 0;
+			border-bottom-left-radius: 3%;
+			width: 250px;
+			height: 350px;
+		}
+		&-title {
+			font-size: 2.5rem;
 		}
 	}
 }
 
+.cart-item-price {
+	font-size: 2rem;
+}
 
+.cart-total {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 1rem;
+	align-items: center;
+	align-self: center;
+	background-color: $white;
+	box-shadow: 0.5rem 0.5rem 1rem $light-gray;
+	border-radius: 3%;
+	width: 15%;
+	margin-bottom: 1.5rem;
+}
