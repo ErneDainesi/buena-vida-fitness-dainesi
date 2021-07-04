@@ -2,16 +2,27 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import ItemDetail from './components/ItemDetail/ItemDetail';
 import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
-import {itemDataService} from '../../services/itemDataService';
+import {itemDetailDataService} from '../../services/itemDataService';
 
 export const ItemDetailContainer = () => {
 	const [itemDetail, setItemDetail] = useState(undefined);
 	const {id: selectedItemId} = useParams();
 	useEffect(() => {
-		itemDataService()
-			.then(data => data.filter(item => (item.id === selectedItemId) && setItemDetail(item)))
-			.catch(err => console.error(err))
-	}, [selectedItemId])
+		itemDetailDataService()
+			.get()
+			.then(querySnapshot => {
+				if (querySnapshot.size === 0) {
+					console.error("No results");
+				} else {
+					querySnapshot.docs.find(doc => {
+						if (doc.id === selectedItemId) {
+							setItemDetail({id: doc.id, ...doc.data()});
+						}
+					})
+				}
+			})
+			.catch(err => console.error(err));
+	}, [selectedItemId]);
 	return itemDetail ? <ItemDetail key={itemDetail.id} detail={itemDetail} /> : <LoadingSpinner />;
 }
 

@@ -1,59 +1,11 @@
-import img1 from '../images/portada-almendras.jpg';
-import img2 from '../images/mix-frutos-secos.jpg';
-import img3 from '../images/cereales-cuadrados.jpg';
-import img4 from '../images/mix-semillas.jpg';
-import img5 from '../images/mix-frutos-rojos.jpg';
+import {database} from '../firebase/firebase';
 
-const itemData = [
-	{
-		id: '1',
-		price: 100,
-		title: 'Almendras',
-		description: 'Pack de almendras frescas',
-		category: 'frutos-secos',
-		stock: 5,
-		imgUrl: img1
-	},
-	{
-		id: '2',
-		price: 100,
-		title: 'Mix Frutos Secos',
-		description: 'Bolsa de mix de frutos secos',
-		category: 'frutos-secos',
-		stock: 5,
-		imgUrl: img2
-	},
-	{
-		id: '3',
-		price: 100,
-		title: 'Cereales Almohaditas',
-		description: 'Rellenos de chocolate blanco',
-		category: 'cereales',
-		stock: 5,
-		imgUrl: img3
-	},
-	{
-		id: '4',
-		price: 100,
-		title: 'Mix Semillas',
-		description: 'Lino, sésamo, chía y girasol',
-		category: 'semillas',
-		stock: 5,
-		imgUrl: img4
-	},
-	{
-		id: '5',
-		price: 100,
-		title: 'Mix Frutos Rojos',
-		description: 'Frambuesas y arandanos',
-		category: 'frutos-rojos',
-		stock: 5,
-		imgUrl: img5
-	}
-];
+export const itemListDataService = filter => {
+	const itemCollection = database.collection("inventory");
+	const filterderCollection = itemCollection.where("category", "==", filter);
+	return filter === 'todo' ? itemCollection : filterderCollection;
+}
 
-export const itemDataService = () => {
-	return new Promise(resolve => {
-		setTimeout(() => resolve(itemData), 2000);
-	});
+export const itemDetailDataService = () => {
+	return database.collection("inventory");
 }
