@@ -32,7 +32,7 @@ export const NavBar = () => {
 				</div>
 				<Link className="nav-link" to="/nosotros">Nosotros</Link>
 				<Link className="nav-link" to="/contacto">Contacto</Link>
-				{!isCartEmpty() && <Link className="nav-link" to="/cart"><CartWidget /></Link>}
+				{!isCartEmpty() && <CartWidget />}
 			</div>
 		</nav>
 	</>;
