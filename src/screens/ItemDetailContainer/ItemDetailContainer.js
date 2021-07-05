@@ -17,7 +17,9 @@ export const ItemDetailContainer = () => {
 					querySnapshot.docs.find(doc => {
 						if (doc.id === selectedItemId) {
 							setItemDetail({id: doc.id, ...doc.data()});
+							return true;
 						}
+						return false;
 					})
 				}
 			})

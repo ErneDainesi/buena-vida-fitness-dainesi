@@ -14,5 +14,8 @@ const firebaseConfig = {
 const fb = firebase.initializeApp(firebaseConfig);
 
 export const database = fb.firestore();
-export const storage = fb.storage();
+export const getStorageRef = () => {
+	let storage = fb.storage();
+	return storage.ref('images');
+}
 

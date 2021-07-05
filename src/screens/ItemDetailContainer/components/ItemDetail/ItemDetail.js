@@ -1,15 +1,26 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import {EndPurchase} from '../EndPurchase/EndPurchase';
+import {getStorageRef} from '../../../../firebase/firebase';
 
 const ItemDetail = item => {
 	const {id, price, title, description, stock, imgUrl} = item.detail;
 	const [amount, setAmount] = useState(0);
 	const [endPurchase, setEndPurchase] = useState();
+	const [imgRef, setImgRef] = useState(null);
 	const handleAmount = amountToAdd => setAmount(amountToAdd);
 	const purchaseSatus = status => setEndPurchase(status);
+	useEffect(() => {
+		const storageRef = getStorageRef();
+		const finalRef = storageRef.child(imgUrl);
+		finalRef.getDownloadURL()
+			.then(url => {
+				setImgRef(url);
+			})
+			.catch(err => console.error(err));
+	}, [imgUrl])
 	return <div className="item-detail">
-		<img src={imgUrl} alt={`img-${id}`} className="item-detail-img" />
+		<img src={imgRef} alt={`img-${id}`} className="item-detail-img" />
 		<div className="item-detail-body">
 			<h2 className="item-detail-title">{title}</h2>
 			<p className="item-detail-description">{description}</p>
@@ -23,3 +34,4 @@ const ItemDetail = item => {
 }
 
 export default ItemDetail;
+
