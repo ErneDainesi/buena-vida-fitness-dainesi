@@ -9,3 +9,14 @@ export const itemListDataService = filter => {
 export const itemDetailDataService = () => {
 	return database.collection("inventory");
 }
+
+export const ordersDataService = () => {
+	return database.collection("orders");
+}
+
+export const updateItemStock = (item, quantity) => {
+	const inventory = itemDetailDataService();
+	const newStock = item.stock - quantity;
+	inventory.doc(item.id).update({...item, stock: newStock});
+}
+
