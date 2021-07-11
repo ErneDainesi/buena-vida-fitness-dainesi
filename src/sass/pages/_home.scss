@@ -8,15 +8,15 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 100%;
+	padding: 15rem 0;
 	.btn {
 		font-size: 2rem;
 	}
-	padding: 15rem 0;
 }
 
 .home-header {
 	backdrop-filter: blur(8px);
-	width: 50%;
+	width: 60%;
 	padding: 2rem;
 }
 
@@ -25,10 +25,78 @@
 }
 
 .home-title {
-	font-size: 8rem;
+	font-size: 7rem;
 }
 
 .home-description {
-	font-size: 3rem;
+	font-size: 2.5rem;
 }
 
+@media screen and (max-width: 768px) {
+	.home-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background-image: none;
+		padding: 0;
+		.btn {
+			font-size: 1rem;
+		}
+	}
+
+	.home-title, .home-description {
+		color: $dark-green;
+	}
+
+	.home-header {
+		backdrop-filter: blur(0px);
+		width: 100%;
+	}
+
+	.home-title {
+		font-size: 3rem;
+	}
+
+	.home-description {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1600px){
+	.home-container {
+		.home-header {
+			width: 80%;
+		}
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 900px) {
+	.home-container {
+		.home-title {
+			font-size: 6rem;
+		}
+
+		.home-description {
+			font-size: 2rem;
+		}
+		.btn {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+@media screen and (min-width: 901px) and (max-width: 1000px) {
+	.home-container {
+		.home-title {
+			font-size: 6.5rem;
+		}
+
+		.home-description {
+			font-size: 2rem;
+		}
+		.btn {
+			font-size: 1.5rem;
+		}
+	}
+}

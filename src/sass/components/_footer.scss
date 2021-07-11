@@ -36,3 +36,27 @@
 .footer-signature {
 	margin-right: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+	.footer-container {
+		padding: 0;
+		flex-direction: column;
+		.logo-img {
+			display: none;
+		}
+		.footer-social-media-link {
+			padding: 1rem;
+		}
+	}
+	.footer-signature, .footer-social-media-title {
+		font-size: 1.3rem;
+		margin: 0;
+	}
+	
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	.footer-signature, .footer-social-media-title {
+		font-size: 1.2rem;
+	}
+}
