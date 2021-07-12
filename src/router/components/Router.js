@@ -3,7 +3,8 @@ import {Switch, Route} from 'react-router-dom';
 import ItemListContainer from '../../screens/ItemListContainer/ItemListContainer';
 import {ItemDetailContainer} from '../../screens/ItemDetailContainer/ItemDetailContainer';
 import {HomePageContainer} from '../../screens/HomePageContainer/HomePage';
-import {Cart} from '../../screens/Cart/Cart';
+import {PurchaseSuccess} from '../../screens/CartContainer/components/Cart/components/PurchaseSuccess/PurchaseSuccess';
+import {CartContainer} from '../../screens/CartContainer/CartContainer';
 
 export const Router = () => {
 	return <>
@@ -20,7 +21,10 @@ export const Router = () => {
 				<ItemDetailContainer />
 			</Route>
 			<Route exact path="/cart">
-				<Cart />
+				<CartContainer />
+			</Route>
+			<Route exact path="/purchaseSuccess/:id">
+				<PurchaseSuccess />
 			</Route>
 		</Switch>
 	</>
