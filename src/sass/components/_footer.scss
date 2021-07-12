@@ -40,7 +40,6 @@
 @media screen and (max-width: 768px) {
 	.footer-container {
 		padding: 0;
-		flex-direction: column;
 		.logo-img {
 			display: none;
 		}
@@ -49,10 +48,8 @@
 		}
 	}
 	.footer-signature, .footer-social-media-title {
-		font-size: 1.3rem;
-		margin: 0;
+		display: none;
 	}
-	
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {

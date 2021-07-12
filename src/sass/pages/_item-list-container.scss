@@ -2,9 +2,10 @@
 
 .item-list-container {
 	margin: 5rem 0;
+	padding: 0 2rem;
 	display: grid;
 	width: 100%;
-	grid-template-columns: repeat(auto-fit, minmax(20rem, 0.2fr));
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 0.2fr));
 	place-items: center;
 	column-gap: 7%;
 	row-gap: 3%;
@@ -21,5 +22,11 @@
 		.card {
 			margin: 2rem;
 		}
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+	.item-list-container {
+		grid-template-columns: repeat(autofit, minmax(30rem, 0.2fr));
 	}
 }
