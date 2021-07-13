@@ -15,7 +15,7 @@ const ItemCount = props => {
 			<p className="product-amount">{count}</p>
 			<button className="amount-toggler-btn" disabled={count === stock} onClick={() => increaseAmount()}>+</button>
 		</div>
-		<button className="btn btn-light-green add-to-cart-btn" disabled={count < 1} onClick={() => {
+		<button className="btn btn-dark-green add-to-cart-btn" disabled={count < 1} onClick={() => {
 			changeStock(count);
 			handlePurchaseStatus(true);
 		}}>Agregar al carrito</button>

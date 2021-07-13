@@ -12,16 +12,23 @@ export const PurchaseFormContainer = props => {
 		name: "",
 		telNumber: "",
 		email: "",
+		emailValidation: "",
 	};
 	const [buyer, setBuyer] = useState(buyerInitialState);
 	const handleBuyer = buyer => setBuyer(buyer);
 	const handleSubmit = e => {
 		e.preventDefault();
+		if (buyer.email !== buyer.emailValidation) {
+			console.error("Emails don't match");
+			setBuyer({...buyer, emailValidation: ""});
+			return false;
+		}
 		cart.forEach(item => {
 			if (item.item.stock < item.quantity) {
 				console.error("One item is out of stock");
 				setBuyer(buyerInitialState);
 				emptyCart();
+				return false;
 			}
 		})
 		const newOrder = {
@@ -32,7 +39,6 @@ export const PurchaseFormContainer = props => {
 		cart.forEach(item => updateItemStock(item.item, item.quantity));
 		ordersDataService().add(newOrder)
 			.then(({id}) => {
-				console.log(`Se guardó la orden con id: ${id}`);
 				handlePurchaseId(id);
 			})
 			.catch(err => console.error(err));

@@ -19,9 +19,23 @@
 		align-items: center;
 		justify-content: center;
 		width: 100%;
+		margin: 1rem 0;
 		.card {
-			margin: 2rem;
+			margin: 1rem;
 		}
+	}
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 767px) {
+	.item-list-container {
+		padding: 0 7rem;
+	}
+}
+
+@media screen and (width: 768px) {
+	.item-list-container {
+		padding: 0 10rem;
 	}
 }
 

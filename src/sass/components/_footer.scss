@@ -52,6 +52,14 @@
 	}
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.footer-container {
+		.social-media-icon {
+			font-size: 2rem;
+		}
+	}
+}
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 	.footer-signature, .footer-social-media-title {
 		font-size: 1.2rem;

@@ -3,7 +3,7 @@ import Logo from '../../images/logo-buena-vida-circle.png'
 import {CartWidget} from './components/CartWidget/CartWidget';
 import {Link} from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faCaretDown, faBars} from '@fortawesome/free-solid-svg-icons';
+import {faCaretDown, faBars, faTimes} from '@fortawesome/free-solid-svg-icons';
 import {CartContext} from '../../contexts/CartContext/CartContext';
 
 export const NavBar = () => {
@@ -16,7 +16,7 @@ export const NavBar = () => {
 					<img src={Logo} alt="logo" className="logo-img" />
 				</Link>
 				<h1 className="nav-title">Buena Vida Fitness</h1>
-				<div className="mobile-menu" onClick={() => setToggleMenu(!toggleMenu)}><FontAwesomeIcon icon={faBars} /></div>
+				<div className="mobile-menu" onClick={() => setToggleMenu(!toggleMenu)}><FontAwesomeIcon icon={toggleMenu ? faTimes : faBars} /></div>
 			</div>
 			<div className={`mobile-nav ${toggleMenu ? "show-menu" : ""}`}>
 				<div className="nav-links">
@@ -35,7 +35,7 @@ export const NavBar = () => {
 					</div>
 					<Link className="nav-link" to="/nosotros" onClick={() => setToggleMenu(false)}>Nosotros</Link>
 					<Link className="nav-link" to="/contacto" onClick={() => setToggleMenu(false)}>Contacto</Link>
-					{!isCartEmpty() && <CartWidget />}
+					{!isCartEmpty() && <CartWidget handleMenu={setToggleMenu} />}
 				</div>
 			</div>
 		</nav>

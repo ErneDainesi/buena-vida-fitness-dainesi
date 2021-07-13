@@ -1,5 +1,29 @@
 @use "../abstracts/" as *;
 
+.cart-grid-container {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	place-items: center;
+}
+
+.cart {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	grid-column-start: 2;
+	grid-column-end: 9;
+}
+
+.purchase-form {
+	display: flex;
+	flex-direction: column;
+	input {
+		margin: 1rem 0;
+	}
+	grid-column-start: 10;
+}
+
 .cart-list {
 	display: flex;
 	flex-direction: column;
@@ -9,30 +33,30 @@
 	.card {
 		flex-direction: row;
 		justify-content: space-between;
-		margin: 1.5rem 0;
-		min-width: 40%;
+		margin: 1rem 0;
+		width: 100%;
 		&-body {
 			flex-direction: column;
 			padding: 0 1rem;
 		}
 		.btn {
 			margin-top: 1.5rem;
-			font-size: 1.5rem;
+			font-size: 1rem;
 		}
 		&-img {
 			border-top-right-radius: 0;
 			border-bottom-left-radius: 3%;
-			width: 250px;
-			height: 350px;
+			width: 15rem;
+			height: 20rem;
 		}
 		&-title {
-			font-size: 2.5rem;
+			font-size: 1.5rem;
 		}
 	}
 }
 
 .cart-item-price {
-	font-size: 2rem;
+	font-size: 1rem;
 }
 
 .cart-total {
@@ -45,6 +69,74 @@
 	background-color: $white;
 	box-shadow: 0.5rem 0.5rem 1rem $light-gray;
 	border-radius: 3%;
-	width: 15%;
+	width: 100%;
 	margin-bottom: 1.5rem;
 }
+
+.empty-cart {
+	display: grid;
+	grid-template-rows: repeat(6, 0.5fr);
+	place-items: center;
+	background-image: url("../../images/empty-cart-bgd.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	&-title {
+		font-size: 4rem;
+		margin-bottom: 1rem;
+		color: $white;
+	}
+	&-blur {
+		grid-row-start: 3;
+		backdrop-filter: blur(8px);
+		text-align: center;
+		padding: 1rem;
+	}
+	.btn {
+		font-size: 1.5rem;
+	}
+
+}
+
+@media screen and (max-width: 768px) {
+	.cart-grid-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 2rem;
+	}
+	.cart-list {
+		.card {
+			&-img {
+				display: none;
+			}
+		}
+	}
+
+	.empty-cart {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-image: none;
+		&-blur {
+			backdrop-filter: none;
+		}
+		&-title {
+			color: $dark-green;
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.empty-cart {
+		&-title {
+			font-size: 3rem;
+		}
+		.btn {
+			font-size: 1rem;
+		}
+	}
+}
+
