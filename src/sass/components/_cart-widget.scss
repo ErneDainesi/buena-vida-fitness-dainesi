@@ -13,15 +13,12 @@
 	border-radius: 100%;
 	padding: 0.2rem 0.6rem;
 	font-size: 0.8rem;
-	position: fixed;
+	position: absolute;
 	top: 2.5rem;
-	right: 1.3rem;
+	right: 0.8rem;
 }
 
 @media screen and (max-width: 768px) {
-	.cart-widget-icon {
-		margin-left: 3.5rem;
-	}
 	.cart-item-count {
 		position: relative;
 		top: -2rem;
