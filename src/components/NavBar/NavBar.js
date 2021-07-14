@@ -33,8 +33,6 @@ export const NavBar = () => {
 							<Link className="dropdown-link" to="/productos/semillas">Semillas</Link>
 						</div>
 					</div>
-					<Link className="nav-link" to="/nosotros" onClick={() => setToggleMenu(false)}>Nosotros</Link>
-					<Link className="nav-link" to="/contacto" onClick={() => setToggleMenu(false)}>Contacto</Link>
 					{!isCartEmpty() && <CartWidget handleMenu={setToggleMenu} />}
 				</div>
 			</div>
