@@ -11,8 +11,12 @@ Este proyecto fue creado para el curso de Reactjs en Coder House.
 
 ### Herramientas utilizadas
 
- Reactjs  |  Sass
+Reactjs | Sass
 
 ## Navegación en la página
 
 ![gif-navegacion](./navegacion-reactjs.gif)
+
+## Realizar una compra en la página
+
+![gif-compra](./realizar-compra.gif)
