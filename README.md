@@ -11,8 +11,8 @@ Este proyecto fue creado para el curso de Reactjs en Coder House.
 
 ### Herramientas utilizadas
 
-<img src="./reactjs-md.png" alt="react-logo" width="100" height="100" />
-<img src="./sass-md.png" alt="sass-logo" />
+<span><img src="./reactjs-md.png" alt="react-logo" width="100" height="100" /></span>
+<span><img src="./sass-md.png" alt="sass-logo" width="100" height="100"/></span>
 
 ## Navegación en la página
 
