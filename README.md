@@ -11,7 +11,19 @@ Este proyecto fue creado para el curso de Reactjs en Coder House.
 
 ### Herramientas utilizadas
 
-Reactjs | Sass
+<div class="tools">
+	<img src="./reactjs-md.png" alt="react-logo" />
+	<img src="./sass-md.png" alt="sass-logo" />
+</div>
+
+<style>
+.tools {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+</style>
 
 ## Navegación en la página
 
