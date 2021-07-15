@@ -21,3 +21,13 @@ Este proyecto fue creado para el curso de Reactjs en Coder House.
 ## Realizar una compra en la página
 
 ![gif-compra](./realizar-compra.gif)
+
+## Desarrollo y diseño
+
+Ernesto Dainesi
+
+### Contactame
+
+<a href="https://www.linkedin.com/in/ernesto-dainesi/"><img src="./linkedin-md.png" /></a> ![linkedin.com/in/ernesto-dainesi/](https://www.linkedin.com/in/ernesto-dainesi/)
+![gmail-icon]("./gmail-md.png") ernestodainesiperrot@gmail.com
+
