@@ -4,7 +4,7 @@
 
 Bienvenidos a Buena Vida Fitness. El lugar ideal para conseguir los mejores
 frutos secos o rojos.  
-Podes entrar ![acá](https://buena-vida-fitness.web.app/) y ver la página!
+Podes entrar [acá](https://buena-vida-fitness.web.app/) y ver la página!
 
 ## Sobre el proyecto
 
