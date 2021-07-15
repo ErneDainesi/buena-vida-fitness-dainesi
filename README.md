@@ -11,16 +11,16 @@ Este proyecto fue creado para el curso de Reactjs en Coder House.
 
 ### Herramientas utilizadas
 
-<span><img src="./reactjs-md.png" alt="react-logo" width="100" height="100" /></span>
-<span><img src="./sass-md.png" alt="sass-logo" width="100" height="100"/></span>
+<span><img src="./readme-imgs/reactjs-md.png" alt="react-logo" width="100" height="100" /></span>
+<span><img src="./readme-imgs/sass-md.png" alt="sass-logo" width="100" height="100"/></span>
 
 ## Navegación en la página
 
-![gif-navegacion](./navegacion-reactjs.gif)
+![gif-navegacion](./readme-imgs/navegacion-reactjs.gif)
 
 ## Realizar una compra en la página
 
-![gif-compra](./realizar-compra.gif)
+![gif-compra](./readme-imgs/realizar-compra.gif)
 
 ## Desarrollo y diseño
 
@@ -28,6 +28,6 @@ Ernesto Dainesi
 
 ### Contactame
 
-<a href="https://www.linkedin.com/in/ernesto-dainesi/" target="_blank"><img src="./linkedin-md.png" width="50" height="50"/></a>  
-<a href="mailto:ernestodainesiperrot@gmail.com"><img src="./gmail-md.png" width="50" height="50"/></a>
+<a href="https://www.linkedin.com/in/ernesto-dainesi/" target="_blank"><img src="./readme-imgs/linkedin-md.png" width="50" height="50"/></a>  
+<a href="mailto:ernestodainesiperrot@gmail.com"><img src="./readme-imgs/gmail-md.png" width="50" height="50"/></a>
 
