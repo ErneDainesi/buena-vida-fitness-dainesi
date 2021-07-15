@@ -29,7 +29,5 @@ Ernesto Dainesi
 ### Contactame
 
 <a href="https://www.linkedin.com/in/ernesto-dainesi/" target="_blank"><img src="./linkedin-md.png" width="50" height="50"/></a>  
-<span>
-    <center><img src="./gmail-md.png" width="50" height="50"/></center>
-    <center>ernestodainesiperrot@gmail.com</center>
-</span>
+<center><img src="./gmail-md.png" width="50" height="50"/></center> <center>ernestodainesiperrot@gmail.com</center>
+
