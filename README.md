@@ -15,10 +15,6 @@ Este proyecto fue creado para el curso de Reactjs en Coder House.
 <span><img src="./readme-imgs/reactjs-md.png" alt="react-logo" width="100" height="100" /></span>
 <span><img src="./readme-imgs/sass-md.png" alt="sass-logo" width="100" height="100"/></span>
 
-## Navegación en la página
-
-![gif-navegacion](./readme-imgs/navegacion-reactjs.gif)
-
 ## Realizar una compra en la página
 
 ![gif-compra](./readme-imgs/realizar-compra.gif)
