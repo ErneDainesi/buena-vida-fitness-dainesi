@@ -3,7 +3,8 @@
 <p align="center"><img src="./src/images/logo-buena-vida-circle.png" alt="logo" /></p>
 
 Bienvenidos a Buena Vida Fitness. El lugar ideal para conseguir los mejores
-frutos secos o rojos.
+frutos secos o rojos.  
+Podes entrar ![acá](https://buena-vida-fitness.web.app/) y ver la página!
 
 ## Sobre el proyecto
 
